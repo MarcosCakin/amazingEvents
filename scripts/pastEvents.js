@@ -19,3 +19,11 @@ function printPastCard() {
 
 const pastContainer = document.getElementById('pastjs')
 printPastCard()
+
+
+
+const checkboxesContainer = document.getElementById('checkboxContainer')
+
+function crearCheckboxes(array) {
+
+}

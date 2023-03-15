@@ -39,11 +39,6 @@ a:hover {
     height: auto;
 }
 
-.checkbox {
-    padding-left: 2vw;
-    background-color: #8EB8E5;
-}
-
 .ref-table {
     text-align: center;
     border: 1px solid white;
@@ -86,5 +81,9 @@ a:hover {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    .checkbox-sec {
+        margin-left: 2vw;
     }
 }
