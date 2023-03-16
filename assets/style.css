@@ -62,6 +62,22 @@ a:hover {
     width: 13.5vw;
 }
 
+.fillearMain {
+    display: flex;
+    height: 61.5vh;
+    align-items: center;
+}
+
+.detailCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A2C7E5;
+    height: 70.3vh;
+    width: 100%;
+    color: black;
+}
+
 @media screen and (max-width: 767px) {
     .card-article {
         display: flex;

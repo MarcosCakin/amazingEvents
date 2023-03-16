@@ -49,24 +49,22 @@
     </header>
 
     <main>
-        <article class="d-flex justify-content-between align-content-center flex-grow-1">
-            <form class="d-flex p-2 align-content-center" method="get">
-                <label class="checkbox"><input type="checkbox" value="cine" name="cinema"> Cinema</label>
-	            <label class="checkbox"><input type="checkbox" value="museum" name="museum"> Museum</label>
-	            <label class="checkbox"><input type="checkbox" value="restaurant" name="restaurant"> Restaurant</label>
-	            <label class="checkbox"><input type="checkbox" value="sports" name="sports"> Sports</label>
-	            <label class="checkbox"><input type="checkbox" value="party" name="party"> Party</label>
-	            <label class="checkbox"><input type="checkbox" value="music" name="music"> Music</label>
+        <article class="d-flex justify-content-around align-content-center flex-grow-1">
+            <form class="align-self-center">
+                <input type="search" class="px-1 my-2" autocomplete="false" placeholder="Search!">
             </form>
-            <div class="hidden-button">
-                <input type="search" placeholder="Search!" aria-label="Search">
-                <button class="btn btn-outline-success m-2" type="submit">Search</button>
+            <div class="align-self-center" id="checkboxContainer">
+
             </div>
         </article>
-        <article id="upjs" class="d-flex justify-content-around flex-wrap">
-            
+
+
+        <article id="articleJs" class="d-flex justify-content-around flex-wrap">
+
         </article>
+
     </main>
+
 
 <footer class="d-flex flex-wrap justify-content-between align-items-center p-3 border-top">
     <div class="col-md-4 d-flex align-items-center">
