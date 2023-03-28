@@ -50,6 +50,10 @@ a:hover {
     border: 1px solid white;
 }
 
+.contactInput {
+    width: 50vw;
+}
+
 .card {
     margin: 2vw;
     width: 20rem;
@@ -61,11 +65,6 @@ a:hover {
 }
 .card-body {
     background-color: #A2C7E5;
-}
-
-
-.select-col {
-    width: 13.5vw;
 }
 
 .fillearMain {
@@ -105,7 +104,6 @@ a:hover {
 
 
 
-
 @media screen and (max-width: 767px) {
     .card-article {
         display: flex;
@@ -117,18 +115,10 @@ a:hover {
         display: none;
     }
 
-    .select-col {
-        width: 45vw;
-    }
-
     footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
-    }
-
-    .checkbox-sec {
-        margin-left: 2vw;
     }
 
     .detailCard {
@@ -137,5 +127,11 @@ a:hover {
         height: 100%;
         margin: 1rem;
     }
+}
 
+@media screen and (max-width:999px){
+    .checkColumn{
+        display: flex;
+        flex-direction: column;
+    }
 }
