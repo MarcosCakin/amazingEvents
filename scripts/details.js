@@ -9,36 +9,26 @@ const params = new URLSearchParams(locationSearch)
 const id = params.get('id')
 
 
-const detalles = data.find(evento => evento.id == id)
+const detalles = amazingEventsData.events.find(element => element.id == id)
 
 
 
+const detailContainer = document.getElementById('divDetails')
 
-const detailContainer = document.getElementById('details')
-
-detailContainer.innerHTML() =
+detailContainer.innerHTML =
 `
-<div class="d-flex justify-content-center" >
-  <img src="${detalles.image}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">${detalles.name}</h5>
-    <p class="card-text">${detalles.description}</p>
-    <a href="./index.html" class="btn btn-primary">volver</a>
-  </div>
+<div class="detailCard">
+    <div class="divImg"> 
+      <img src="${detalles.image}" class="detailImg" alt="event image">
+    </div>
+    <div class="textDetail">
+        <h1>${detalles.name}</h1>
+        <h6>${detalles.description}</h6>
+        <p>Date: ${detalles.date}</p>
+        <p>Category: ${detalles.category}</p>
+        <p>Place: ${detalles.place}</p>
+        <h3 class="btn btn-success">U$${detalles.price}</h3>
+        <a href="./index.html" class="btn btn-secondary">Volver</a>
+    </div>
 </div>
 `
-
-
-
-// detailContainer.innerHTML= `
-//         <div>
-//             <img src="${detalles.image}" class="card-img-top rounded-top-5 my-2" id="detail-img" alt="img of ${detalles.image}">
-//         </div>
-//         <div class="card-body rounded-5 my-2">
-//           <h2 class="card-title">${detalles.name}</h2>
-//           <h5>${detalles.date}, ${detalles.place}</h5>
-//           <p>${detalles.category}</p>
-//           <p class="card-text">${detalles.description}</p>
-//           <a href="" class="btn btn-primary">${detalles.price}</a>
-//         </div>
-// `
