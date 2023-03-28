@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    height: auto;
 }
 
 header {
@@ -10,6 +11,11 @@ header {
 
 main {
     background-color: #A2C7E5;    
+}
+
+footer {
+    color: #d90368;
+    background-color: #4472CA;
 }
 
 article, form, .hidden-button, input {
@@ -21,7 +27,7 @@ article, form, .hidden-button, input {
     background-color: #A2C7E5;
 }
 
-footer, i, .ref {
+i, .ref {
     color: #d90368;
     background-color: #4472CA;
 }
@@ -68,15 +74,19 @@ a:hover {
     align-items: center;
 }
 
-.detailCard{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #A2C7E5;
-    height: 70.3vh;
-    width: 100%;
-    color: black;
+#details{
+    background-color: #8EB8E5;
+    border: 2px solid #4472CA;
+    height: 62vh;
+    width: 70%;
 }
+
+
+#detail-img {
+    height: 20vh;
+    border: 2px solid #4472CA;
+}
+
 
 @media screen and (max-width: 767px) {
     .card-article {
