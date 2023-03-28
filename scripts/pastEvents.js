@@ -25,8 +25,8 @@ function printPastCard(array) {
       <div class="card rounded-top-5">
             <img src="${event.image}" class="card-img-top p-2 rounded-top-5 border-bottom" alt="card picture">
             <div class="card-body">
-              <h5 class="card-title">${event.name}</h5>
-              <p class="card-text">${event.description}</p>
+              <h3 class="card-title">${event.name}</h3>
+              <h6 class="card-text">${event.description}</h6>
               <a href="./details.html?id=${event.id}" class="btn btn-primary">Details</a>
             </div>
       </div>
