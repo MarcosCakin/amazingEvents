@@ -1,41 +1,49 @@
+fetch('https://mindhub-xj03.onrender.com/api/amazing')
+.then((res)=>res.json())
+.then((datos)=>{
+    /*Functions print*/
+    function printUpCard(array){
+      if (array.length == 0) {
+        cardsContainer.innerHTML = `<h1 class="display-1 fw-bolder fillearMain">NOT FOUND!</h1>`
+        return
+      }
+      let cards = ''
+      array.forEach(event => {
+        if (parseInt(event.date) >= (parseInt(datos.currentDate))) {
+          cards += `
+          <div class="card rounded-top-5">
+                <img src="${event.image}" class="card-img-top p-2 rounded-top-5 border-bottom" alt="card picture">
+                <div class="card-body">
+                  <h3 class="card-title">${event.name}</h3>
+                  <h6 class="card-text">${event.description}</h6>
+                  <a href="./details.html?id=${event._id}" class="btn btn-primary">Details</a>
+                </div>
+          </div>
+          `
+        }
+        cardsContainer.innerHTML = cards
+      })
+    }
+  printUpCard(datos.events)
+  crearCheckboxes(datos.events)
+    /*Events*/
+    function bothFilters() {
+      let firstFilter = textFilter(datos.events, searchInput.value)
+      let secondFilter = categoryFilter(firstFilter)
+      printUpCard(secondFilter)
+    }    
+  searchInput.addEventListener('input', bothFilters)
+  checkboxesContainer.addEventListener('change', bothFilters)
+})
+
+
+
+  /* DOM */
 const cardsContainer = document.getElementById('articleJs')
 const checkboxesContainer = document.getElementById('checkboxContainer')
 const searchInput = document.querySelector('input')
-
-printUpCard(amazingEventsData.events)
-crearCheckboxes(amazingEventsData.events) 
-
-// EVENTS 
-
-searchInput.addEventListener('input', bothFilters)
-
-checkboxesContainer.addEventListener('change', bothFilters)
-
-// FUNCTIONS
-
-function printUpCard(array) {
-  if (array.length == 0) {
-    cardsContainer.innerHTML = `<h1 class="display-1 fw-bolder fillearMain">NOT FOUND!</h1>`
-    return
-  }
-  let cards = ''
-  for (let event of array) {
-    if (parseInt(event.date) >= (parseInt(amazingEventsData.currentDate))) {
-      cards += `
-      <div class="card rounded-top-5">
-            <img src="${event.image}" class="card-img-top p-2 rounded-top-5 border-bottom" alt="card picture">
-            <div class="card-body">
-              <h3 class="card-title">${event.name}</h3>
-              <h6 class="card-text">${event.description}</h6>
-              <a href="./details.html?id=${event.id}" class="btn btn-primary">Details</a>
-            </div>
-      </div>
-      `
-    }
-  }
-  cardsContainer.innerHTML = cards
-}
-
+  
+  /* FUNCTIONS */
 function crearCheckboxes(array) {
   let arrayCat = array.map(event => event.category)
   let setCat = new Set(arrayCat)
@@ -58,16 +66,9 @@ function categoryFilter(array){
   let arrayChecks = Array.from(checkboxes)
   let arrayChecksChecked = arrayChecks.filter(check => check.checked)
   let arrayCheckCheckedValues = arrayChecksChecked.map(checkChecked => checkChecked.value)
-  console.log(arrayCheckCheckedValues)
   let arrayFiltrado = array.filter(element => arrayCheckCheckedValues.includes(element.category))
   if (arrayChecksChecked.length > 0){
     return arrayFiltrado
   }
   return array
-}
-
-function bothFilters() {
-  let firstFilter = textFilter(amazingEventsData.events, searchInput.value)
-  let secondFilter = categoryFilter(firstFilter)
-  printUpCard(secondFilter)
 }

@@ -1,17 +1,24 @@
+fetch('https://mindhub-xj03.onrender.com/api/amazing')
+.then((res)=>res.json())
+.then((datos)=>{
+    /*Functions print*/
+  printCard(datos.events)
+  crearCheckboxes(datos.events)
+    /*Events*/
+    function bothFilters() {
+      let firstFilter = textFilter(datos.events, searchInput.value)
+      let secondFilter = categoryFilter(firstFilter)
+      printCard(secondFilter)
+    }    
+  searchInput.addEventListener('input', bothFilters)
+  checkboxesContainer.addEventListener('change', bothFilters)
+})
+
 const cardsContainer = document.getElementById('articleJs')
 const checkboxesContainer = document.getElementById('checkboxContainer')
 const searchInput = document.querySelector('input')
-
-printCard(amazingEventsData.events)
-crearCheckboxes(amazingEventsData.events)
-
-
-// EVENTS 
-searchInput.addEventListener('input', bothFilters)
-
-checkboxesContainer.addEventListener('change', bothFilters)
-
-// FUNCTIONS
+  
+  // FUNCTIONS
 function printCard(array){
   if (array.length == 0) {
     cardsContainer.innerHTML = `<h1 class="display-1 fw-bolder fillearMain">NOT FOUND!</h1>`
@@ -24,7 +31,7 @@ function printCard(array){
     <div class="card-body">
       <h3 class="card-title">${event.name}</h3>
       <h6 class="card-text">${event.description}</h6>
-      <a href="./details.html?id=${event.id}" class="btn btn-primary">Details</a>
+      <a href="./details.html?id=${event._id}" class="btn btn-primary">Details</a>
     </div>
   </div>`
   })
@@ -58,10 +65,4 @@ function categoryFilter(array){
     return arrayFiltrado
   }
   return array
-}
-
-function bothFilters() {
-  let firstFilter = textFilter(amazingEventsData.events, searchInput.value)
-  let secondFilter = categoryFilter(firstFilter)
-  printCard(secondFilter)
 }

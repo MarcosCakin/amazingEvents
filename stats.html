@@ -49,9 +49,7 @@
     </header>
 
     <main class="d-flex justify-content-center">
-
-         <article class="container my-4 p-4">
-
+        <article class="container my-4 p-4">
             <table class="table table-bordered">
                 <thead>
                   <tr>
@@ -63,57 +61,38 @@
                         <th>Events with larger capacity</th>
                     </tr>
                 </thead>
-                <tbody id="stats">
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                <tbody id="importantStats">
                 </tbody>
               </table>
-
-              <table class="table table-bordered">
-                  <thead>
-                    <tr>
-                        <h3 class="ref-table">Past events statistics by category</h3>
-                    </tr>
-                        <tr class="col-12">
-                          <th>Categories</th>
-                          <th>Revenues</th>
-                          <th>Percentage of attendance</th>
-                        </tr>
-                  </thead>
-                  <tbody id="pastStats">
-                      <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                      </tr>
-                  </tbody>
-              </table>
-
             <table class="table table-bordered">
                 <thead>
-                    <tr>
-                        <h3 class="ref-table">Upcoming events statistics by category</h3>
-                    </tr>
-                    <tr class="col-12">
+                  <tr>
+                      <h3 class="ref-table">Upcoming events statistics by category</h3>
+                  </tr>
+                  <tr class="col-12">
+                      <th>Categories</th>
+                      <th>Revenues</th>
+                      <th>Percentage of attendance</th>
+                  </tr>
+              </thead>
+              <tbody id="upcomingStats">
+              </tbody>
+             </table>
+            <table class="table table-bordered">
+                <thead>
+                  <tr>
+                      <h3 class="ref-table">Past events statistics by category</h3>
+                  </tr>
+                      <tr class="col-12">
                         <th>Categories</th>
                         <th>Revenues</th>
                         <th>Percentage of attendance</th>
-                    </tr>
+                      </tr>
                 </thead>
-                <tbody id="upcomingStats">
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                <tbody id="pastStats">
                 </tbody>
             </table>
-
         </article>
-
       </main>    
 
       <footer class="d-flex flex-wrap justify-content-between align-items-center p-3 border-top">
@@ -132,7 +111,7 @@
         </ul>
     </footer>
 
-<script src="./scripts/data.js"></script>
+
 <script src="./scripts/stats.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
