@@ -18,7 +18,7 @@ fetch('https://mindhub-xj03.onrender.com/api/amazing')
           <p>Category: ${detalles.category}</p>
           <p>Place: ${detalles.place}</p>
           <h3 class="btn btn-success">U$${detalles.price}</h3>
-          <a href="./index.html" class="btn btn-secondary">Volver</a>
+          <a href="./index.html" class="btn btn-secondary">Back home</a>
       </div>
   </div>
   `

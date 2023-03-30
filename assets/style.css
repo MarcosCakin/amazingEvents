@@ -2,20 +2,21 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    height: auto;
 }
 
 header {
     background-color: #4472CA;
+    height: 20vh;
 }
 
 main {
-    background-color: #A2C7E5;    
+    background-color: #A2C7E5; 
 }
 
 footer {
     color: #d90368;
     background-color: #4472CA;
+    height: auto;
 }
 
 article, form, .hidden-button, input {
@@ -113,14 +114,16 @@ a:hover {
         text-align: center;
     }
 
+    header {
+        height: auto;
+    }
+
     .hidden-button {
         display: none;
     }
 
     footer {
-        display: flex;
         flex-direction: column;
-        justify-content: center;
     }
 
     .detailCard {
